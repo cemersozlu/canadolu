@@ -1,0 +1,54 @@
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+@function color-contrast($background-color) {
+  $lightness: (red($background-color) * 0.299 + green($background-color) * 0.587 + blue($background-color) * 0.114);
+  @if $lightness > 186 {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+$pinned--color:#f44336;
+$gathering--color: #8bc34a;
+$meeting--color: #3f51b5;
+
+$categories: (
+  "cat-pinned": (
+    "icon": "\e6aa",
+    "color": $pinned--color
+  ),
+  "cat-gathering": (
+    "icon": "\f233",
+    "color": $gathering--color
+  ),
+  "cat-meeting": (
+    "icon": "\e878",
+    "color": $meeting--color
+  )
+);
+
+$grid-areas: (
+  1: '1 / 1 / 3 / 2',
+  2: '1 / 2 / 2 / 3',
+  3: '2 / 2 / 3 / 3',
+  4: '3 / 1 / 4 / 3',
+  5: '4 / 1 / 5 / 2',
+  6: '4 / 2 / 5 / 3',
+  7: '5 / 1 / 6 / 2',
+  8: '5 / 2 / 6 / 3',
+  9: '6 / 1 / 7 / 2',
+  10: '6 / 2 / 7 / 3'
+);
