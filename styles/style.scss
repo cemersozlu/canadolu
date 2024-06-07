@@ -142,27 +142,27 @@ body{
         }
     }
     &.upcoming-events, &.archived-events{ //* css alternative titles
-        // &:before{
-        //     position: relative;
-        //     left: 0;
-        //     width: 500px;
-        //     font-size: 4rem;
-        //     opacity: 1;
-        //     top: -1.8rem;
-        //     overflow-x: hidden;
-        //     white-space: nowrap;
-        //     text-align: center;
-        // }
+        &:before{
+            position: relative;
+            left: 0;
+            width: 500px;
+            font-size: 4rem;
+            opacity: 1;
+            top: -1.8rem;
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-align: center;
+        }
     }
     &.upcoming-events{
-        // &:before{
-        //     content: "upcoming events";
-        // }
+        &:before{
+            content: "upcoming events";
+        }
     }
     &.archived-events{
-        // &:before{
-        //     content: "old events";
-        // }
+        &:before{
+            content: "old events";
+        }
         @media (prefers-color-scheme: light) {
             background-color: $timeline__archived--bgcolor--light; 
             border-block-start-color: $timeline-color--light;
